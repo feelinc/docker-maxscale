@@ -1,8 +1,6 @@
 FROM centos:7
 MAINTAINER Sulaeman <me@sulaeman.com>
 
-ENV MAXSCALE_VERSION 2.0.4
-
 # We set some defaults for config creation. Can be overwritten at runtime.
 ENV HOSTNAME=maxscale \
     THREADS=4 \
@@ -19,7 +17,7 @@ ENV HOSTNAME=maxscale \
 RUN rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB \
     && yum -y install https://downloads.mariadb.com/enterprise/yzsw-dthq/generate/10.0/mariadb-enterprise-repository.rpm \
     && yum -y update \
-    && yum -y install maxscale-$MAXSCALE_VERSION \
+    && yum -y install maxscale \
     && yum clean all \
     && rm -rf /tmp/*
 
