@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build --tag=maxscale:1.0.0 --memory=512m .
+docker build --tag=maxscale --memory=512m .

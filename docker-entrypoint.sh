@@ -28,6 +28,7 @@ connection_timeout=$CONNECTION_TIMEOUT
 user=$USER
 passwd=$PASS
 enable_root_user=$ENABLE_ROOT_USER
+max_connections=$READ_MAX_CONNECTIONS
 
 [Read Listener]
 type=listener
@@ -48,6 +49,7 @@ connection_timeout=$CONNECTION_TIMEOUT
 user=$USER
 passwd=$PASS
 enable_root_user=$ENABLE_ROOT_USER
+max_connections=$RW_MAX_CONNECTIONS
 
 [RW Splitter Listener]
 type=listener
